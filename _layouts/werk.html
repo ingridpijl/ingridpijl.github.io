@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<nav class='mod-subnav'>
+  <a href='/werk/beelden'>Beelden</a>
+  <a href='/werk/reliefs'>Reliëfs</a>
+  <a href='/werk/klein-plastiek'>Klein plastiek</a>
+</nav>
+<article class="page mod-work">
+  <div class="entry">
+    {% for work in page.collection %}
+    <figure>
+      <img src='/images/work/{{ work.images.first.file }}' />
+      <!-- <caption> -->
+      <!--   <h2>{{ work.title }}</h2> -->
+      <!--   <span>{{ work.images.first.material }}</span> -->
+      <!-- </caption> -->
+    </figure>
+    {% endfor %}
+  </div>
+</article>
